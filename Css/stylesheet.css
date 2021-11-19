@@ -1,0 +1,320 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+@font-face {
+  font-family: "Light";
+  src: url("../Fonts/SFProLight.ttf");
+}
+@font-face {
+  font-family: "UltraLight";
+  src: url("../Fonts/SFProUltraLight.ttf");
+}
+@font-face {
+  font-family: "Thin";
+  src: url("../Fonts/SFProThin.ttf");
+}
+@font-face {
+  font-family: "SemiBold";
+  src: url("../Fonts/SFProSemiBold.ttf");
+}
+@font-face {
+  font-family: "Regular";
+  src: url("../Fonts/SFProRegular.ttf");
+}
+@font-face {
+  font-family: "Medium";
+  src: url("../Fonts/SFProMedium.ttf");
+}
+body {
+  overflow-x: hidden;
+}
+:root {
+  --text-color: rgb(221, 221, 221);
+  --link-color: #086bce;
+}
+.grid {
+  width: 100vw;
+  display: grid;
+  grid-template-areas:
+    "nav nav"
+    "holiday holiday"
+    "holiday holiday"
+    "iphone13-Pro iphone13-Pro"
+    "iphone13-Pro iphone13-Pro"
+    "iphone13 iphone13"
+    "iphone13 iphone13"
+    "gallery gallery"
+    "gallery gallery";
+}
+.section1 a,
+.section1 p,
+.section2 a,
+.section2 p,
+.gallery a,
+.gallery p,
+.navbar a,
+.navbar p,
+.holiday-Sale a,
+.holiday-Sale p {
+  font-family: "Regular";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-link {
+  color: var(--link-color);
+}
+.product-link:hover,
+.column a:hover,
+.holiday-Sale a:hover {
+  text-decoration: underline;
+}
+.navbar {
+  top: 0;
+  width: 100vw;
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333333f5;
+  color: var(--text-color);
+  height: 4.5vh;
+  grid-area: nav;
+}
+.navbar a {
+  color: var(--text-color);
+  margin: 0px 23px;
+  font-size: 0.75rem;
+  font-family: "Thin";
+}
+.navbar a:hover {
+  color: white;
+}
+
+.holiday-Sale {
+  background-color: #fbedf9;
+  height: 76vh;
+  grid-area: holiday;
+}
+.holiday-Sale a {
+  height: 4.6vh;
+  font-size: 1.35rem;
+}
+.holiday-Sale a:nth-child(1) {
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+.holiday-Sale p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e34140;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+.holiday-logo {
+  margin-top: 6vh;
+  margin-right: 0.75vw;
+}
+.search-img {
+  position: relative;
+  top: 2.5vh;
+}
+.logo {
+  position: relative;
+  top: 0.25vh;
+}
+.bag-img {
+  position: relative;
+  top: 0.25vh;
+}
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "SemiBold";
+  margin-top: 4vh;
+  font-size: 3.5rem;
+  color: #1d1d1f;
+}
+.display-Imgs {
+  margin: 30px 295px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.section1 {
+  margin-top: 1vh;
+  height: 75vh;
+  background: url("https://www.apple.com/v/home/ah/images/heroes/iphone-13-pro/hero_iphone_13pro__dhnsegysa42u_largetall.jpg")
+    no-repeat center center/cover;
+  grid-area: iphone13-Pro;
+}
+.section-content {
+  margin-top: 10vh;
+}
+.section-content p {
+  font-size: 1.75rem;
+}
+.section-links {
+  font-size: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-links a {
+  margin: 15px 17.5px;
+}
+.section2 {
+  margin-top: 1vh;
+  height: 75vh;
+  background: url("https://www.apple.com/v/home/ah/images/heroes/iphone-13/hero_iphone_13__f194u1rdooeq_largetall.jpg")
+    no-repeat center center/cover;
+  grid-area: iphone13;
+}
+.section2 p {
+  color: #fec2eb;
+}
+.section2 h1 {
+  color: white;
+}
+.gallery {
+  grid-area: gallery;
+  gap: 1vh;
+  display: grid;
+  grid-template-areas:
+    "item1 item2"
+    "item1 item2"
+    "item3 item4"
+    "item3 item4"
+    "item5 item6"
+    "item5 item6";
+}
+.item {
+  height: 60vh;
+}
+.item1 {
+  grid-area: item1;
+  background: url("https://www.apple.com/v/home/ah/images/promos/macbook-pro/tile_macbookpro__cx0ur0qg9biq_large.jpg")
+    no-repeat center center/cover;
+}
+.item2 {
+  grid-area: item2;
+  background: url("https://www.apple.com/v/home/ah/images/promos/watch-series-7/tile_watch__e9n11b6m6yq2_large.jpg")
+    no-repeat center center/cover;
+}
+.item3 {
+  grid-area: item3;
+  background: url("https://www.apple.com/v/home/ah/images/promos/homepod-mini/tile_homepod_mini__b73w4z3ljymu_large.jpg")
+    no-repeat center center/cover;
+}
+.item4 {
+  grid-area: item4;
+  background: url("https://www.apple.com/v/home/ah/images/promos/arcade-lego-castaways/tile_lego_castaways__d2v36ez91ewm_large.jpg")
+    no-repeat center center/cover;
+}
+.item5 {
+  grid-area: item5;
+  background: url("https://www.apple.com/v/home/ah/images/promos/apple-card/tile__cauwwcyyn9hy_large.jpg")
+    no-repeat center center/cover;
+}
+.item6 {
+  grid-area: item6;
+  background: url("https://www.apple.com/v/home/ah/images/promos/tv-plus-dickinson-s3/promo_dickinson__c9ea4l2f5rki_large.jpg")
+    no-repeat center center/cover;
+}
+.item-content {
+  font-size: 1.35rem;
+}
+.item-links {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-links a {
+  margin: 15px 17.5px;
+}
+.item h1 {
+  font-size: 2.5rem;
+}
+.gallery-logos {
+  position: relative;
+  left: 22vw;
+  margin-top: 4vh;
+}
+.new-product {
+  font-size: 0.75rem;
+  color: rgb(191, 72, 0);
+  margin-top: 4vh;
+}
+.watch {
+  margin-top: 0vh;
+}
+.item5 img {
+  left: 40vh;
+}
+.tv {
+  left: 46vh;
+  bottom: 5vh;
+}
+
+.Ad {
+  position: relative;
+  left: 28vh;
+  top: 40vh;
+}
+.stream {
+  position: relative;
+  color: white;
+  top: 40vh;
+  font-size: 1.2rem;
+}
+footer {
+  margin-top: 1vh;
+  width: 100vw;
+  height: 75vh;
+  color: #8a8a8e;
+  background-color: #f5f5f7;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  font-family: "Regular";
+}
+.legal-explain {
+  margin-top: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 22.5vw;
+  width: 55vw;
+}
+ul {
+  list-style-type: none;
+}
+.legal-explain li {
+  margin-bottom: 10px;
+}
+.footer-links {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-left: 22.5vw;
+  width: 75vw;
+}
+.column {
+  padding-right: 100px;
+}
+.column li {
+  margin-bottom: 10px;
+}
+.column a {
+  color: #6f6f72;
+}
+.title {
+  color: #363636;
+  margin-top: 17.5px;
+}
